@@ -1,14 +1,14 @@
 
-import React from 'react';
-import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
+  import React from 'react';
+  import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
-const ProductDetail =({ route, navigation }) =>{
-  const { item } = route.params;
+  const ProductDetail =({ route, navigation }) =>{
+    const { item } = route.params;
 
- 
+  
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container}> 
       <View style={styles.imageContainer}>
         <Image
           style={styles.image}

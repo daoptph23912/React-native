@@ -30,10 +30,8 @@ const FormScreen = () => {
                     <Stack.Screen name='LogIn' component={LoginInScreen} options={{ headerShown: false }} />
                     <Stack.Screen name='SignUp' component={SignUpScreen} options={{ headerShown: false }} />
                     <Stack.Screen name='Main' component={MainScreen} options={{ headerShown: false }} />
-                    
-                    <Stack.Screen name="ProductDetail" component={ProductDetail} options={{ headerShown: false }} />
-
-                    <Stack.Screen name="ScreenCart" component={ScreenCart} options={{ headerShown: false }} />
+                    <Stack.Screen name="ProductDetailScreen" component={ProductDetail} options={{ headerShown: false }} />
+                    {/* <Stack.Screen name="ScreenCart" component={ScreenCart} options={{ headerShown: false }} /> */}
 
                     <Stack.Screen name='EditProfile' options={{ title: 'Edit profile' }} component={EditProfileScreen} />
                     <Stack.Screen name='EditProfileDetails' options={{ title: 'Profile details' }} component={EditProfileDetails} />
@@ -42,7 +40,10 @@ const FormScreen = () => {
                     <Stack.Screen name='ForgotPassword' options={{ headerShown: false }} component={ForgotPasswordScreen} />
                 </Stack.Navigator>
             </View>
+
         </NavigationContainer>
+
+
     )
 }
 

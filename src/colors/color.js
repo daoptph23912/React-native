@@ -11,7 +11,11 @@ const colors = {
     color7: '#636363',
     color8: '#dbf8ffff',
     color9: '#05c662',
-    color10: '#dbd8d8'
+    color10: '#dbd8d8',
+    color11:'#483d8b',
+    color12:'#00008b',
+    color13:'#191970',
+    color14:'#663399'
 }
 
 export default colors;

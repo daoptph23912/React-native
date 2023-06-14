@@ -36,12 +36,12 @@ const EditProfileScreen = ({ navigation, route }) => {
       <View style={styles.detailsContainer}>
         <View style={styles.header}>
           <Text style={styles.text1}>Details</Text>
-          <Text
-            style={styles.text2}
-            onPress={() => {
-              navigation.navigate("EditProfileDetails",{userId: userId});
-            }}
-          >
+            <Text
+              style={styles.text2}
+              onPress={() => {
+                navigation.navigate("EditProfileDetails",{userId: userId});
+              }}
+            >
             Chỉnh sửa
           </Text>
         </View>

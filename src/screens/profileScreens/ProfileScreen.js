@@ -157,47 +157,11 @@ const ProfileScreen = ({ stackNavigation, userId }) => {
           style={styles.btnEditProfile}
         >
           <MaterialIcons name="edit" size={22} color={colors.black} />
-          <Text style={styles.text2}>Chỉnh sửa thông tin người dùng</Text>
+          <Text style={styles.text2}>Thông tin người dùng</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.box2}>
-        <View style={styles.detailsContainer}>
-          <Text style={[styles.text1, { fontSize: 18, marginBottom: 5 }]}>
-            Chi Tiết
-          </Text>
-          {school.show && (
-            <LineInfo iconName="" content={"Số điện thoại: " + school.name} />
-          )}
-          {work.show && (
-            <LineInfo iconName="" content={"Địa chỉ: " + work.name} />
-          )}
-          {address.show && (
-            <LineInfo iconName="" content={"Email: " + address.name} />
-          )}
-          {relationship.show && (
-            <LineInfo iconName="" content={"Năm sinh:" +relationship.name} />
-          )}
-          {!school.show &&
-            !work.show &&
-            !address.show &&
-            !relationship.show && (
-              <LineInfo
-                iconName="security"
-                content={"You are not share any infomation"}
-              />
-            )}
-        </View>
-        <TouchableOpacity
-          onPress={showEditProfileDetails}
-          style={[
-            styles.btnEditProfile,
-            { backgroundColor: colors.color8, width: "100%", marginTop: 10 },
-          ]}
-        >
-          <Text style={[styles.text2, { color: colors.color4 }]}>
-            Chỉnh sửa thông tin chi tiết
-          </Text>
-        </TouchableOpacity>
+       
       </View>
       <View style={styles.box3}>
        

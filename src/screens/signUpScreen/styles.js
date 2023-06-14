@@ -40,8 +40,8 @@ const styles = StyleSheet.create({
         marginTop: Platform.OS === 'android'? Constants.statusBarHeight: 0
     },
     logo: {
-        width: 120,
-        height: 120,
+        width: 200,
+        height: 130,
         marginTop: 20
     }
 })

@@ -26,7 +26,10 @@
     "react-native": "0.71.8",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-simple-toast": "^2.0.0",
-    "react-native-web": "~0.18.10"
+    "react-native-web": "~0.18.10",
+    "socket.io-client": "^4.6.2",
+    "string-similarity": "^4.0.4",
+    "stripe": "^12.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

@@ -77,8 +77,8 @@ const styles = StyleSheet.create({
         backgroundColor: colors.black
     },
     logo: {
-        width: 120,
-        height: 120,
+        width: 200,
+        height: 130,
         marginTop: 10
     }
 

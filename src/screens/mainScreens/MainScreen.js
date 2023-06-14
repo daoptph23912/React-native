@@ -1,5 +1,5 @@
 import { View, Text, BackHandler, Alert } from "react-native";
-import React, { useEffect } from "react";
+import React, { useEffect ,useState} from "react";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -15,12 +15,19 @@ import colors from "../../colors/color";
 import CustomButton from "../../components/button/CustomButton";
 import { StatusBar } from "expo-status-bar";
 import MenuScreen from "../MenuScreen";
-
+import ScreenCart from "../ScreenCart";
+import { useNavigation } from '@react-navigation/native';
 export var userId;
 
-const MainScreen = ({ navigation, route }) => {
+const MainScreen = ({ navigation, route  }) => {
   userId = route.params.idUser;
 
+  const [cartItems, setCartItems] = useState([]); // Add cartItems state
+
+  const handleAddToCart = (item) => { 
+    setCartItems((prevCartItems) => [...prevCartItems, item]);
+  };
+  
   const backAction = () => {
     Alert.alert("Hold on!", "Are you sure you want to go back?", [
       {
@@ -63,15 +70,18 @@ const MainScreen = ({ navigation, route }) => {
                 ? "notifications-sharp"
                 : "notifications-outline";
             } else if (route.name === "Feedback") {
-              iconName = focused ? "play-circle-sharp" : "play-circle-outline";
-            } else if (route.name === "Menu") {
+              iconName = focused ? "chatbubble-ellipses-sharp" : "chatbubble-ellipses-outline";
+            }else if (route.name === "Menu") {
               iconName = "menu";
               size+=2;
+            }
+            else if (route.name === "ScreenCart") {
+              iconName = focused ? "cart-sharp" : "cart-outline"; // Thay thế iconName bằng biểu tượng mong muốn
             }
             return <Ionicons name={iconName} size={size} color={color} />;
           },
           tabBarLabel: ({ focused, color, size }) => {
-            color = focused ? colors.white : colors.color4;
+            color = focused ? colors.white : colors.color5;
             return (
               <Text
                 style={{
@@ -84,9 +94,9 @@ const MainScreen = ({ navigation, route }) => {
               </Text>
             );
           },
-          tabBarActiveTintColor: colors.color3,
+          tabBarActiveTintColor: colors.color5,
           tabBarInactiveTintColor: colors.white,
-          tabBarStyle: { backgroundColor: colors.color4 },
+          tabBarStyle: { backgroundColor: colors.color5},
         })}
       >
         <Tab.Screen name="Home">
@@ -95,11 +105,15 @@ const MainScreen = ({ navigation, route }) => {
               {...props}
               stackNavigation={navigation}
               userId={userId}
+              handleAddToCart={handleAddToCart}
+              cartItems={cartItems} // Pass cartItems and setCartItems as props
+              setCartItems={setCartItems} // Pass the function as prop
+          
             />
           )}
         </Tab.Screen>
         <Tab.Screen name="Feedback" component={EntertaimentScreen} />
-        {/* <Tab.Screen name="Notification" component={NotificationScreen} /> */}
+        <Tab.Screen name="ScreenCart" component={ScreenCart} />
         <Tab.Screen name="Profile">
             {(props)=> <ProfileScreen {...props} stackNavigation={navigation} userId={userId} />}
         </Tab.Screen>

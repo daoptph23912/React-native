@@ -44,7 +44,7 @@ const ChangePasswordScreen = ({ navigation, route }) => {
     <LinearGradient
       start={{ x: 0, y: 0 }}
       end={{ x: 0.8, y: 1 }}
-      colors={["#E2FFF1", "#50D0D2"]}
+      colors={["#663399", "#50D0D2"]}
       style={styles.changePassword}
     >
       <Pressable style={{ alignSelf: "baseline" }} onPress={goBack}>
@@ -56,7 +56,7 @@ const ChangePasswordScreen = ({ navigation, route }) => {
           <Text style={styles.label}>Menu</Text>
         </View>
       </Pressable>
-      <Image style={styles.logo} source={require("../images/applogo.png")} />
+      <Image style={styles.logo} source={require("../images/mbiileshop.jpg")} />
       <View style={styles.form}>
         <Text style={styles.title}>Change Password</Text>
         <Text

@@ -14,20 +14,20 @@
       "following": [],
       "info": {
         "school": {
-          "name": "aaaaa",
-          "show": true
+          "name": "",
+          "show": false
         },
         "address": {
-          "name": "a111111",
-          "show": true
+          "name": "",
+          "show": false
         },
         "relationship": {
-          "name": "aa",
-          "show": true
+          "name": "",
+          "show": false
         },
         "work": {
-          "name": "a",
-          "show": true
+          "name": "",
+          "show": false
         }
       },
       "isLock": false,

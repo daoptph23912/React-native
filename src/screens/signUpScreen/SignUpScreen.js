@@ -76,7 +76,7 @@ const SignUpScreen = ({ navigation }) => {
     <LinearGradient
       start={{ x: 0, y: 0 }}
       end={{ x: 0.8, y: 1 }}
-      colors={["#E2FFF1", "#50D0D2"]}
+      colors={["#663399", "#50D0D2"]}
       style={styles.signUp}
     >
       <Pressable style={{ alignSelf: "baseline" }} onPress={goBack}>
@@ -88,7 +88,7 @@ const SignUpScreen = ({ navigation }) => {
           <Text style={styles.label}>Sign In</Text>
         </View>
       </Pressable>
-      <Image style={styles.logo} source={require("../../images/applogo.png")} />
+      <Image style={styles.logo} source={require("../../images/mbiileshop.jpg")} />
       <View style={styles.form}>
         <Text style={styles.title}>Sign Up</Text>
         <Text
