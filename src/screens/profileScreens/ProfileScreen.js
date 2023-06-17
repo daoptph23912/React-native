@@ -82,7 +82,7 @@ const ProfileScreen = ({ stackNavigation, userId }) => {
   };
 
   const editPost = (post) => {
-    stackNavigation.navigate("UpdatePost",{userId: userId,post: post});
+    stackNavigation.navigate("UpdatePost", { userId: userId, post: post });
   };
 
   const removePost = (id) => {
@@ -112,7 +112,7 @@ const ProfileScreen = ({ stackNavigation, userId }) => {
     >
       <View style={styles.box1}>
         <View style={styles.images}>
-         
+
           <View style={styles.avatarContainer}>
             <Image
               source={
@@ -150,21 +150,56 @@ const ProfileScreen = ({ stackNavigation, userId }) => {
         </View>
         <View style={styles.infoContainer}>
           <Text style={styles.text1}>{nickName}</Text>
-        
+
         </View>
         <TouchableOpacity
           onPress={showEditProfileScreen}
           style={styles.btnEditProfile}
         >
-          <MaterialIcons name="edit" size={22} color={colors.black} />
+          <MaterialIcons name="" size={22} color={colors.black} />
           <Text style={styles.text2}>Thông tin người dùng</Text>
         </TouchableOpacity>
       </View>
-      <View style={styles.box2}>
-       
-      </View>
+      {/* <View style={styles.box2}>
+        <View style={styles.detailsContainer}>
+          <Text style={[styles.text1, { fontSize: 18, marginBottom: 5 }]}>
+            Chi Tiết
+          </Text>
+          {school.show && (
+            <LineInfo iconName="school" content={"Đã học tại " + school.name} />
+          )}
+          {work.show && (
+            <LineInfo iconName="work" content={"Làm việc tại " + work.name} />
+          )}
+          {address.show && (
+            <LineInfo iconName="place" content={"Đến từ " + address.name} />
+          )}
+          {relationship.show && (
+            <LineInfo iconName="favorite" content={relationship.name} />
+          )}
+          {!school.show &&
+            !work.show &&
+            !address.show &&
+            !relationship.show && (
+              <LineInfo
+               
+              />
+            )}
+        </View>
+        <TouchableOpacity
+          onPress={showEditProfileDetails}
+          style={[
+            styles.btnEditProfile,
+            { backgroundColor: colors.color8, width: "100%", marginTop: 10 },
+          ]}
+        >
+          <Text style={[styles.text2, { color: colors.color4 }]}>
+            Chỉnh sửa thông tin và chi tiết công khai
+          </Text>
+        </TouchableOpacity>
+      </View> */}
       <View style={styles.box3}>
-       
+
         {posts.map((item, index) => {
           return (
             <View key={index}>

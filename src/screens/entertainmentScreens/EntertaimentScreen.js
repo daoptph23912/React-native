@@ -17,16 +17,16 @@ const EntertaimentScreen = () => {
 
   const sendMessage = () => {
     if (message.trim() === '') return;
-  
+
     const newMessage = {
       id: messages.length.toString(),
       text: message,
       isSent: true,
     };
-  
+
     setMessages([...messages, newMessage]);
     setMessage('');
-  
+
     // Xử lý chức năng tự động trả lời
     setTimeout(() => {
       const keywords = [
@@ -47,26 +47,31 @@ const EntertaimentScreen = () => {
         { keyword: 'xin chào ', response: ' Chào bạn, tôi có thể giúp gì cho bạn không' },
         { keyword: 'hi ', response: ' Chào bạn, tôi có thể giúp gì cho bạn không' },
         { keyword: 'helooo ', response: ' Chào bạn, tôi có thể giúp gì cho bạn không' },
+        { keyword: 'san pham nay gia bao nhieu', response: 'sản phẩm này giá 100.000 vnđ' },
+        { keyword: 'gia bao nhieu', response: 'sản phẩm này giá 100.000 vnđ' },
+        { keyword: 'dien thoai nay gia bao nhiêu', response: 'sản phẩm này giá 10.000.000 vnđ' },
+        { keyword: 'cai sạc  nay gia bao nhieu', response: 'sản phẩm này giá 100.000 vnđ' },
+        { keyword: 'ban co biet thong tin ve cai dien thoai nay khong', response: 'Điện thoại iphone 14 với thiết kế mỏng nhẹ chỉ có giá là 20.000.000 vnđ ' },
       ];
-  
+
       let bestMatch = findBestMatch(message.toLowerCase(), keywords.map((item) => item.keyword.toLowerCase()));
       let matchedKeyword = keywords[bestMatch.bestMatchIndex];
-  
+
       if (bestMatch.bestMatch.rating < 0.6) {
         // Nếu độ tương đồng quá thấp, không tìm thấy từ khóa chính xác
         matchedKeyword = { keyword: '', response: 'Xin lỗi vui lòng có thể ghi lại câu hỏi được không ?' };
       }
-  
+
       const autoReply = {
         id: (messages.length + 1).toString(),
         text: matchedKeyword.response,
         isSent: false,
       };
-  
+
       setMessages((prevMessages) => [...prevMessages, autoReply]);
     }, 1000);
   };
-  
+
 
   const renderItem = ({ item }) => (
     <View style={[styles.messageContainer, item.isSent ? styles.sentMessage : styles.receivedMessage]}>
@@ -76,7 +81,7 @@ const EntertaimentScreen = () => {
 
   return (
     <View style={styles.container}>
-      
+
       <FlatList
         style={styles.messagesList}
         data={messages}

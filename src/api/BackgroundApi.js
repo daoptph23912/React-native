@@ -1,4 +1,4 @@
-const url = "http://192.168.1.71:3000/backgrounds";
+const url = "http://192.168.1.91:3000/backgrounds";
 
 export function getAllBackground() {
     return fetch(url,{

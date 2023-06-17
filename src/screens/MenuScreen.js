@@ -20,7 +20,7 @@ const MenuScreen = ({ stackNavigation, userId }) => {
     });
   };
 
-  const switchToCreatePostsScreen = () => {
+  const clickuser = () => {
     stackNavigation.navigate("CreatePost", { userId: userId });
   };
 
@@ -83,7 +83,7 @@ const MenuScreen = ({ stackNavigation, userId }) => {
           )}
           {shadowButton(
             require("../images/forgort.png"),
-            "Quên mật khẩu",
+            "Information",
             switchToForgortPassword
           )}
           {shadowButton(require("../images/logout.png"), "Đăng xuất", logout)}

@@ -93,7 +93,7 @@ const EditProfileDetails = ({ navigation, route }) => {
             onChangeText={setWork}
             cursorColor={"black"}
             style={styles.input}
-            placeholder="Job"
+            placeholder="Số điện thoại"
           />
           {/* <MaterialIcons name="edit" color={"black"} size={30} /> */}
         </View>
@@ -139,14 +139,14 @@ const EditProfileDetails = ({ navigation, route }) => {
             onChangeText={setSchool}
             cursorColor={"black"}
             style={styles.input}
-            placeholder="School"
+            placeholder="Email"
           />
           {/* <MaterialIcons name="edit" color={"black"} size={30} /> */}
         </View>
       </View>
       <View style={styles.item}>
         <View style={styles.header}>
-          <Text style={styles.text1}>Năm sinh</Text>
+          <Text style={styles.text1}>Công việc</Text>
          
         </View>
         <View
@@ -162,7 +162,7 @@ const EditProfileDetails = ({ navigation, route }) => {
             onChangeText={setRelationship}
             cursorColor={"black"}
             style={styles.input}
-            placeholder="Relationship"
+            placeholder="Công việc"
           />
           {/* <MaterialIcons name="edit" color={"black"} size={30} /> */}
         </View>

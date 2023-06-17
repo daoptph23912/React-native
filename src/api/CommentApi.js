@@ -1,4 +1,4 @@
-const url = "http://192.168.1.71:3000/comments";
+const url = "http://192.168.1.91:3000/comments";
 
 export function addComment(comment) {
   fetch(url, {

@@ -35,7 +35,7 @@ const EditProfileScreen = ({ navigation, route }) => {
       
       <View style={styles.detailsContainer}>
         <View style={styles.header}>
-          <Text style={styles.text1}>Details</Text>
+          <Text style={styles.text1}>Thông tin chi tiết</Text>
             <Text
               style={styles.text2}
               onPress={() => {
@@ -47,11 +47,11 @@ const EditProfileScreen = ({ navigation, route }) => {
         </View>
         <LineInfo
           iconName=""
-          content={school===""? "No infomation" : "Số điện thoại "+school}
+          content={work===""? "Chưa có thông tin" : "Số điện thoại : "+work}
         />
-        <LineInfo iconName="" content={address===""? "No infomation" :"Địa chỉ " + address} />
-        <LineInfo iconName="" content={work===""? "No infomation" :"Email" + work} />
-        <LineInfo iconName="" content={relationship===""? "No infomation" : relationship} />
+        <LineInfo iconName="" content={address===""? "Chưa có thông tin" :"Địa chỉ:  " + address} />
+        <LineInfo iconName="" content={school===""? "Chưa có thông tin" :"Email: " + school} />
+        <LineInfo iconName="" content={relationship===""? "Chưa có thông tin" : "Công việc: " + relationship} />
       </View>
     </ScrollView>
   );
@@ -78,10 +78,12 @@ const styles = StyleSheet.create({
   },
   detailsContainer: {
     paddingBottom: 20,
+    marginTop:30
   },
   text1: {
     fontFamily: "AndikaNewBasic",
     fontSize: 18,
+    textAlign:"center"
   },
   header: {
     flexDirection: "row",

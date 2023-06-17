@@ -31,7 +31,7 @@ const FormScreen = () => {
                     <Stack.Screen name='SignUp' component={SignUpScreen} options={{ headerShown: false }} />
                     <Stack.Screen name='Main' component={MainScreen} options={{ headerShown: false }} />
                     <Stack.Screen name="ProductDetailScreen" component={ProductDetail} options={{ headerShown: false }} />
-                    {/* <Stack.Screen name="ScreenCart" component={ScreenCart} options={{ headerShown: false }} /> */}
+                    <Stack.Screen name="ScreenCart" component={ScreenCart} options={{ headerShown: false }} />
 
                     <Stack.Screen name='EditProfile' options={{ title: 'Edit profile' }} component={EditProfileScreen} />
                     <Stack.Screen name='EditProfileDetails' options={{ title: 'Profile details' }} component={EditProfileDetails} />

@@ -1,4 +1,4 @@
-const url = "http://192.168.1.71:3000/posts";
+const url = "http://192.168.1.91:3000/posts";
 
 export function addPosts(post) {
   fetch(url, {

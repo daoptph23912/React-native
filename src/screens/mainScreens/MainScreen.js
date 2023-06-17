@@ -81,7 +81,7 @@ const MainScreen = ({ navigation, route  }) => {
             return <Ionicons name={iconName} size={size} color={color} />;
           },
           tabBarLabel: ({ focused, color, size }) => {
-            color = focused ? colors.white : colors.color5;
+            color = focused ? colors.black : colors.grey;
             return (
               <Text
                 style={{
@@ -94,9 +94,9 @@ const MainScreen = ({ navigation, route  }) => {
               </Text>
             );
           },
-          tabBarActiveTintColor: colors.color5,
-          tabBarInactiveTintColor: colors.white,
-          tabBarStyle: { backgroundColor: colors.color5},
+          tabBarActiveTintColor: colors.grey,
+          tabBarInactiveTintColor: colors.grey,
+          tabBarStyle: { backgroundColor: colors.grey},
         })}
       >
         <Tab.Screen name="Home">

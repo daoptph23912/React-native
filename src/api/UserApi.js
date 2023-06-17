@@ -1,4 +1,4 @@
-const url = "http://192.168.1.71:3000/users";
+const url = "http://192.168.1.91:3000/users";
 
 export function getUserWithPhone(phone) {
   return fetch(url + "?phone=" + phone, {

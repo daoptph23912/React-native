@@ -5,8 +5,38 @@
   "users": [
     {
       "phone": "11111",
-      "nickName": "11111",
+      "nickName": "Phạm Thành Đạo",
       "password": "11111",
+      "avatar": "",
+      "background": "",
+      "type": "user",
+      "follower": [],
+      "following": [],
+      "info": {
+        "school": {
+          "name": "thanhdao02dd@gmail.com",
+          "show": false
+        },
+        "address": {
+          "name": "thai binh",
+          "show": false
+        },
+        "relationship": {
+          "name": "sinh vien",
+          "show": false
+        },
+        "work": {
+          "name": "0979022810",
+          "show": false
+        }
+      },
+      "isLock": false,
+      "id": 1
+    },
+    {
+      "phone": "0979022810",
+      "nickName": "thanh dao",
+      "password": "123456",
       "avatar": "",
       "background": "",
       "type": "user",
@@ -31,7 +61,37 @@
         }
       },
       "isLock": false,
-      "id": 1
+      "id": 2
+    },
+    {
+      "phone": "0979022811",
+      "nickName": "vietdung",
+      "password": "1111",
+      "avatar": "",
+      "background": "",
+      "type": "user",
+      "follower": [],
+      "following": [],
+      "info": {
+        "school": {
+          "name": "thnahdao02DD@gmail.com",
+          "show": false
+        },
+        "address": {
+          "name": "ha noi",
+          "show": false
+        },
+        "relationship": {
+          "name": "sinh vien",
+          "show": false
+        },
+        "work": {
+          "name": "0970291921",
+          "show": false
+        }
+      },
+      "isLock": false,
+      "id": 3
     }
   ]
 }

@@ -24,7 +24,7 @@ const Notification = ({ src, textContent, textTime }) => {
                         ellipsizeMode='tail'
                         style={styles.textContent}
                         numberOfLines={3}>
-                        <Text>Lê Gia Tuấn</Text>{textContent}
+                        <Text>Phạm Thành Đạo</Text>{textContent}
                     </Text>
                     <Text style={styles.textTime}>{textTime}</Text>
                 </View>
@@ -34,4 +34,4 @@ const Notification = ({ src, textContent, textTime }) => {
     )
 }
 
-export default Notification
+export default Notification;
